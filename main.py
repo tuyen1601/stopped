@@ -3,8 +3,8 @@ import cv2
 from src.tracker.visualize import plot_tracking
 from src.tracker.byte_tracker import BYTETracker
 from src.detector.YOLO_detector import *
-from utils.draw_polygon import *
-from utils.lane_line_detector import *
+from src.utils.draw_polygon import *
+from src.utils.lane_line_detector import *
 
 
 class Predictor(object):
@@ -30,8 +30,8 @@ class Predictor(object):
         mask = find_lane_line(self.img_detect)
         center = [[int((points[1][0] + points[0][0]) / 2), int((points[1][1] + points[0][1]) / 2)],
                   [int((points[2][0] + points[3][0]) / 2), int((points[2][1] + points[3][1]) / 2)]]
-        cv2.imshow('image', mask)
-        cv2.waitKey(0)
+        # cv2.imshow('image', mask)
+        # cv2.waitKey(0)
         contours = find_contour(mask)
         for c in contours:
             if len(c) > 20 and len(c) < 100:

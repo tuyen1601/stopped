@@ -21,10 +21,3 @@ def find_lane_line(image):
 
 def calculate_distance(point, line):
     return np.linalg.norm(np.cross(line[1] - line[0], line[0] - point)) / np.linalg.norm(line[1] - line[0])
-
-
-if __name__ == '__main__':
-    p1 = [0, 0]
-    p2 = [[1, 0], [0, 1]]
-
-    print(calculate_distance(np.array(p1), np.array(p2)))
