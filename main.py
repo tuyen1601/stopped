@@ -3,8 +3,8 @@ import cv2
 from src.tracker.visualize import plot_tracking
 from src.tracker.byte_tracker import BYTETracker
 from src.detector.YOLO_detector import *
-from draw_polygon import *
-from lane_line_detector import *
+from utils.draw_polygon import *
+from utils.lane_line_detector import *
 
 
 class Predictor(object):
